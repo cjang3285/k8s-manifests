@@ -1,0 +1,26 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: staging
+
+resources:
+  - ../../base
+
+namePrefix: staging-
+
+commonLabels:
+  environment: staging
+
+images:
+  - name: blog-backend
+    newName: YOUR_DOCKERHUB_USERNAME/blog-backend
+    newTag: latest
+  - name: blog-frontend
+    newName: YOUR_DOCKERHUB_USERNAME/blog-frontend
+    newTag: latest
+
+replicas:
+  - name: blog-backend
+    count: 1
+  - name: blog-frontend
+    count: 1
