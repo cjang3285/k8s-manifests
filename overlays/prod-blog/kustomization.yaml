@@ -13,10 +13,10 @@ commonLabels:
 
 images:
   - name: blog-backend
-    newName: YOUR_DOCKERHUB_USERNAME/blog-backend
+    newName: andy1692/blog-backend
     newTag: latest
   - name: blog-frontend
-    newName: YOUR_DOCKERHUB_USERNAME/blog-frontend
+    newName: andy1692/blog-frontend
     newTag: latest
 
 replicas:
